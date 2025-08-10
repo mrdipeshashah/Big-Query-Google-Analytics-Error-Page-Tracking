@@ -1,1 +1,1 @@
-Tracking of error page tracking. I have provided a link to a GTM container in GitHub that will provide the the different options in how to set it up and then depending on the set-up it may require some tweaks to the Big Query code 
+Tracking of error page tracking. I have provided a link to a GTM container in GitHub that will provide different options in how to set it up and then depending on the set-up it may require some tweaks to the Big Query code 
