@@ -7,8 +7,9 @@ SELECT
   (select timestamp_millis(value.int_value) from unnest(event_params) where key = 'timestamp') as event_timestamp,
   event_date,
   (select extract(month from timestamp_millis(value.int_value)) from unnest(event_params) where key = 'timestamp') as month,
+  (select extract(day from timestamp_millis(value.int_value)) from unnest(event_params) where key = 'timestamp') as date,
   (select extract(year from timestamp_millis(value.int_value)) from unnest(event_params) where key = 'timestamp') as year,
-  (select extract(hour from timestamp_millis(value.int_value)) from unnest(event_params) where key = 'timestamp') as event_hour,
+  (select extract(hour from timestamp_millis(value.int_value)) from unnest(event_params) where key = 'timestamp') as hour,
   1 as count
 FROM  `enter.tablename_123456.events_*`
 WHERE
